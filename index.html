@@ -38,7 +38,7 @@
         <div class="tile"></div>
     </div>
     <div>
-        <div id="message" class="d-flex justify-content-center mb-2"></div>
+        <div id="message" class="message d-flex justify-content-center mb-2"></div>
         <div class="d-flex justify-content-center align-item-center">
             <button id="reset" class="btn btn-success">Reset</button>
         </div>
@@ -108,7 +108,8 @@
                     if(isWonDiagonal)
                     document.getElementById("message").innerText='Congratulation you have won';  
                 }
-            }        
+            }
+            
         }
 
         let checkIfWonDiagonal=()=>{
