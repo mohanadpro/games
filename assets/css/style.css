@@ -1,0 +1,94 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #26006f;
+}
+
+#board{
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    margin:150px auto 30px auto;
+
+}
+
+.nav a{
+    color: white;
+}
+.types img{
+    width: 150px;
+    height: 150px;
+}
+.tile{
+    width: 100px;
+    height: 100px;
+    border: 1px solid #01dfba;
+    font-size: 50px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#reset{
+    width: 300px;
+    background-color: orange;
+}
+
+#message{
+    color: green;
+    font-size: 25px;
+}
+
+#rock-paper-scissor-game{
+    border: 3px solid #01dfba;
+    width: 300px;
+    height: 400px;
+    display: flex;
+    margin-top: 3%;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center; 
+}
+
+#lost,#won{
+
+    color: red;
+    padding-left: 10px;
+}
+
+#messages{
+    margin-top: 5%;
+
+}
+
+
+
+@media screen and (max-width:376px) {
+    #rock-paper-scissor-game{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .types img{
+        width: 75px;
+        height: 75px;
+    }
+
+    #rock-paper-scissor-game{
+        border: 3px solid #01dfba;
+        width: 100px;
+        height: 200px;
+        display: flex;
+        margin-top: 3%;
+        flex-direction: column;
+        justify-items: center;
+        align-items: center; 
+    }
+    #paper,#scissor,#rock,#paper1,#scissor1,#rock1{
+        width: 50px;
+        height: 50px;
+    }
+
+}

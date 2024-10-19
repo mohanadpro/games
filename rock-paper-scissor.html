@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Games</title>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+</head>
+
+<body class="container">
+    <header>
+        <ul class="nav" data-bs-theme="dark">
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="index.html">Tic Tac Toe</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="rock-paper-scissor.html">Rock Paper Scissor</a>
+            </li>
+        </ul>
+    </header>
+    <main>
+        <div class="container"></div>
+        <div id="messages" class="col-12">
+            <div id="message" class="d-flex justify-content-center m-3 ">
+                You won <span id="won">0</span>
+            </div>
+            <div id="message" class="d-flex justify-content-center mb-2">
+                You lost <span id="lost">0</span>
+            </div>
+
+        </div> 
+
+        <div class="row">
+            <div class="col-6 col-md-6 col-lg-6">
+                <div class="types d-flex justify-content-center align-item-center"> 
+                    <div class="d-flex flex-column">
+                        <div>
+                            <img data-type="rock" src="assets/images/Rock.png" alt="Rock">
+                        </div>  
+                        <div>
+                            <img data-type="paper" src="assets/images/Paper.png" alt="Paper">
+                        </div>
+                        <div>
+                            <img data-type="scissor" src="assets/images/Scissor.png" alt="Scissor">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-6 col-lg-6 d-flex justify-content-center">
+                <div id="rock-paper-scissor-game" >
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="assets/js/bootstrap.bundle.min.js" ></script>
+
+    <script>
+        let initTypes=['rock','paper','scissor'];
+        let types=document.querySelectorAll('img');
+        for(let type of types)
+            type.addEventListener('click',function(e){
+                let typeName= type.getAttribute('data-type');
+                let randomType=initTypes[Math.floor(Math.random()*3)];
+                let rockPaperScissorArea=document.getElementById("rock-paper-scissor-game");
+                let firstImage=document.createElement('img');
+                let img1=document.createElement('img');
+                switch(typeName)
+                    {
+                        case 'paper':
+                        firstImage.setAttribute("src",'assets/images/Paper.png');
+                        firstImage.setAttribute("alt",'Paper'); 
+                        firstImage.setAttribute("id","paper");                    
+                            break;
+                        case 'rock':
+                        firstImage.setAttribute("src",'assets/images/Rock.png');
+                        firstImage.setAttribute("alt",'Rock');
+                        firstImage.setAttribute("id","rock")                       
+                            break;
+                        case 'scissor':
+                        firstImage.setAttribute("src",'assets/images/Scissor.png');
+                        firstImage.setAttribute("alt",'Scissor.png');
+                        firstImage.setAttribute("id","scissor");                       
+                            break;
+                    }
+                    switch(randomType)
+                    {
+                        case 'paper':
+                            img1.setAttribute("src",'assets/images/Paper.png');
+                            img1.setAttribute("alt",'Paper');
+                            img1.setAttribute("id","paper1");                       
+
+                            break;
+                        case 'rock':
+                            img1.setAttribute("src",'assets/images/Rock.png');
+                            img1.setAttribute("alt",'Rock');
+                            img1.setAttribute("id","rock1");                       
+                            break;
+                        case 'scissor':
+                            img1.setAttribute("src",'assets/images/Scissor.png');
+                            img1.setAttribute("alt",'Scissor.png');
+                            img1.setAttribute("id","scissor1");                       
+                            break;
+                    }
+
+
+                rockPaperScissorArea.innerHTML='';
+                rockPaperScissorArea.appendChild(firstImage);
+                rockPaperScissorArea.appendChild(img1);
+
+
+                if( randomType=='rock' &&typeName=='paper')
+                {
+                    let wins=parseInt(document.getElementById('won').textContent);
+                    document.getElementById('won').textContent=++wins;
+                }
+                if( randomType=='rock' &&typeName=='scissor')
+                {
+                    let losts=parseInt(document.getElementById('lost').textContent);
+                    document.getElementById('lost').textContent=++losts;
+                }
+                if( randomType=='rock' &&typeName=='rock')
+                {
+                    console.log(`random type ${randomType} , your type ${typeName} , even`);
+                }
+
+
+                if( randomType=='paper' &&typeName=='rock')
+                {
+                    let losts=parseInt(document.getElementById('lost').textContent);
+                    document.getElementById('lost').textContent=++losts;
+                }
+                if( randomType=='paper' &&typeName=='scissor')
+                {
+                    let wins=parseInt(document.getElementById('won').textContent);
+                    document.getElementById('won').textContent=++wins;
+                }
+                if( randomType=='paper' &&typeName=='paper')
+                {
+                    console.log(`random type ${randomType} , your type ${typeName} , even`);
+                }            
+
+
+                if( randomType=='scissor' &&typeName=='rock')
+                {
+                    let wins=parseInt(document.getElementById('won').textContent);
+                    document.getElementById('won').textContent=++wins;
+                }                
+                if( randomType=='scissor' &&typeName=='scissor')
+                {
+                    console.log(`random type ${randomType} , your type ${typeName} , even`);
+                }
+                if( randomType=='scissor' &&typeName=='paper')
+                {                    
+                    let losts=parseInt(document.getElementById('lost').textContent);
+                    document.getElementById('lost').textContent=++losts;
+                }
+            })
+    </script>
+</body>
+
+</html>
