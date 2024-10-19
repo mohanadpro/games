@@ -33,7 +33,8 @@ body{
 
 #reset{
     width: 300px;
-    background-color: orange;
+    background-color: #01dfba;
+    color: #26006f;
 }
 
 .message{
