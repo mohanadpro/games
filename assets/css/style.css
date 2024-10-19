@@ -36,7 +36,7 @@ body{
     background-color: orange;
 }
 
-#message{
+.message{
     color: green;
     font-size: 25px;
 }

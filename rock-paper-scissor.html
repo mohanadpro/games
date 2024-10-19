@@ -23,10 +23,10 @@
     <main>
         <div class="container"></div>
         <div id="messages" class="col-12">
-            <div id="message" class="d-flex justify-content-center m-3 ">
+            <div class="message d-flex justify-content-center m-3 ">
                 You won <span id="won">0</span>
             </div>
-            <div id="message" class="d-flex justify-content-center mb-2">
+            <div class="message1 d-flex justify-content-center mb-2">
                 You lost <span id="lost">0</span>
             </div>
 
@@ -91,13 +91,14 @@
                             img1.setAttribute("src",'assets/images/Paper.png');
                             img1.setAttribute("alt",'Paper');
                             img1.setAttribute("id","paper1");                       
+                            break;                        
 
-                            break;
                         case 'rock':
                             img1.setAttribute("src",'assets/images/Rock.png');
                             img1.setAttribute("alt",'Rock');
                             img1.setAttribute("id","rock1");                       
                             break;
+
                         case 'scissor':
                             img1.setAttribute("src",'assets/images/Scissor.png');
                             img1.setAttribute("alt",'Scissor.png');
