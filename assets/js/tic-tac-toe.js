@@ -1,64 +1,108 @@
+// inital array that contains if the tile is taken or not
+// True is taken
+// False is not taken 
 let takenTiles = [false, false, false, false, false, false, false, false, false];
+
+// Two dimensional array that contains which type is taken X or O
 let takenType = [['', '', ''], ['', '', ''], ['', '', '']];
+
+// To change the current player ex: True X next round !True so O
 let xCurrentPlayer = true;
-let j = 0;
+
+
+let column = 0;
+
+
+// get all tiles
 let tiles = Array.from(document.querySelectorAll('.tile'));
+
+
+// reset button is clicked
+// initial all variables
 document.getElementById('reset').addEventListener('click', function () {
     tiles.forEach((tile, index) => {
         tile.innerHTML = '';
-        j = 0;
+        column = 0;
     });
     takenTiles=[false, false, false, false, false, false, false, false, false];
     takenType=[['', '', ''], ['', '', ''], ['', '', '']];
     xCurrentPlayer = true;
     document.getElementById("message").innerText='';
 })
+
+
+// loop on each tile and add click event handler 
 tiles.forEach((tile, index) => {
     tile.addEventListener('click', function (e) {
+        // check if the tile is not taken before
         if (takenTiles[index] != true) {
-            let i = Math.floor(index / 3);
+            
+            // Algorithm to convert number to two dimensional array
+            // Tiles are order from 0 to 8 
+            // ex: 0 => (0,0) , 1 => (0,1) , 2 => (0,2) 
+            // 3 => (1,0) , 4 => (1,1) , 5 => (1,2)  
+            // 6 => (2,0) , 7 => (2,1) , 8 => (2,2)  
+            let row = Math.floor(index / 3);
             if(index<3)
             {
-                j=index;
+                column=index;
             }
             else
             if(index<6)
             {
-                j=index-3;
+                column=index-3;
             }
             else
             {
-                j=index-6;
+                column=index-6;
             }
+
+            // decide which player is the current player
             this.innerText = xCurrentPlayer ? 'X' : 'O';
             this.style.color = xCurrentPlayer ? 'blue' : 'red';
+
+            // take the tile
             takenTiles[index] = true;
-            takenType[i][j] = xCurrentPlayer ? 'X' : 'O';
+
+            // insert X or Y in the specific index 
+            takenType[row][column] = xCurrentPlayer ? 'X' : 'O';
             xCurrentPlayer = !xCurrentPlayer;
-            j++;
+
+            // increase column value for the two dimensional array
+            column++;
+
+            // after every click check if the player win
             checkIfWon();
         }
     })
 });
 
+let wonMessage= () => {
+    document.getElementById("message").innerText='Congratulation you have won';
+}
+
 let checkIfWon = () => {
     let isWonInColumn=checkIfWonByColumn();
+    
+    // check if the player win in any column
     if(isWonInColumn)
         {
-            document.getElementById("message").innerText='Congratulation you have won';
+            wonMessage()
         }
     else
     {
+        // check if the player win in any row
         let isWonInRow=checkIfWonInRows();
         if(isWonInRow)
         {
-            document.getElementById("message").innerText='Congratulation you have won';
+            wonMessage()
         }
         else
         {
+            // check if the player win in any diagonal
             let isWonDiagonal=checkIfWonDiagonal();
             if(isWonDiagonal)
-            document.getElementById("message").innerText='Congratulation you have won';  
+                wonMessage()  
         }
     }
     
@@ -77,7 +121,6 @@ let checkIfWonDiagonal=()=>{
 
 let checkIfWonInRows=()=>{
     let isEqual;
-    let whoIsTheWinner='';
     for (let i = 0; i < 3; i++) {
         isEqual= false;
         for (let k = 0; k < 2; k++)

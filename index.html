@@ -17,6 +17,8 @@
 </head>
 
 <body class="container">
+    <!-- Navbar to choose between 2 pages 
+     eiter Tic tac toe play or Rock paper scissor -->
     <ul class="nav" data-bs-theme="dark">
         <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="index.html">Tic Tac Toe</a>
@@ -26,6 +28,7 @@
         </li>
     </ul>
 
+    <!-- Tic tac toe tiles that contain either X or O-->
     <div id="board">
         <div class="tile"></div>
         <div class="tile"></div>
@@ -37,13 +40,17 @@
         <div class="tile"></div>
         <div class="tile"></div>
     </div>
+
+    <!-- This message will be shown if the user win the match -->
     <div>
         <div id="message" class="message d-flex justify-content-center mb-2"></div>
+
+        <!-- To reset the game delete all contains in the tiles and also the message -->
         <div class="d-flex justify-content-center align-item-center">
             <button id="reset" class="btn btn-success">Reset</button>
         </div>
     </div>
-
+    
     <script src="assets/js/bootstrap.bundle.min.js" ></script>
     <script src="assets/js/tic-tac-toe.js"> </script>
 </body>
