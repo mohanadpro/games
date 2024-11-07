@@ -13,6 +13,8 @@
 
 <body class="container">
     <header>
+            <!-- Navbar to choose between 2 pages 
+            eiter Tic tac toe play or Rock paper scissor -->
         <ul class="nav" data-bs-theme="dark">
             <li class="nav-item">
                 <a class="nav-link" aria-current="page" href="index.html">Tic Tac Toe</a>
@@ -22,8 +24,10 @@
             </li>
         </ul>
     </header>
+
+    
     <main>
-        <div class="container"></div>
+         <!-- Messages will be shown to user how many times they won or lose -->
         <div id="messages" class="col-12">
             <div class="message d-flex justify-content-center m-3 ">
                 You won <span id="won">0</span>
@@ -38,6 +42,10 @@
             <div class="col-6 col-md-6 col-lg-6">
                 <div class="types d-flex justify-content-center align-item-center"> 
                     <div class="d-flex flex-column">
+                        <!-- Using these images can the user play
+                             each image has a specific shape [rock, paper, scissor]
+                             by pressing on the image the user decide which type they want to play 
+                        -->
                         <div>
                             <img data-type="rock" src="assets/images/Rock.png" alt="Rock">
                         </div>  
@@ -51,6 +59,7 @@
                 </div>
             </div>
             <div class="col-6 col-md-6 col-lg-6 d-flex justify-content-center">
+                <!-- this section to show the result of playing  -->
                 <div id="rock-paper-scissor-game" >
                 </div>
             </div>

@@ -19,6 +19,7 @@
 <body class="container">
     <!-- Navbar to choose between 2 pages 
      eiter Tic tac toe play or Rock paper scissor -->
+    <header>
     <ul class="nav" data-bs-theme="dark">
         <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="index.html">Tic Tac Toe</a>
@@ -27,7 +28,9 @@
             <a class="nav-link" href="rock-paper-scissor.html">Rock Paper Scissor</a>
         </li>
     </ul>
+    </header>
 
+    <main>
     <!-- Tic tac toe tiles that contain either X or O-->
     <div id="board">
         <div class="tile"></div>
@@ -50,6 +53,7 @@
             <button id="reset" class="btn btn-success">Reset</button>
         </div>
     </div>
+    </main>
     
     <script src="assets/js/bootstrap.bundle.min.js" ></script>
     <script src="assets/js/tic-tac-toe.js"> </script>
