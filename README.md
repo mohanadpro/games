@@ -1,3 +1,4 @@
+![CI logo](assets/images/site-on-different-size.png)
 # games
 
 # it's a website that let people play Tic tac toe and rock paper scissor 
