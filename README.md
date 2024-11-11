@@ -24,11 +24,17 @@ It's a website that let the user play Tic tac toe and rock paper scissor
 
 ---
 
-# used languages : JAVASCRIPT HTML CSS BOOTSTRAP
+# used languages :
+* JAVASCRIPT 
+* HTML 
+* CSS 
+* BOOTSTRAP
 
 ---
 
-# Helped websites Vecteezy 
+# Helped websites
+* Vecteezy : For images 
+* Github : to upload the source code and deploy the website on
 
 ---
 
