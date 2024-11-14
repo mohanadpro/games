@@ -33,7 +33,7 @@ It's a website that let the user play Tic tac toe and rock paper scissor
 * After 2 or 3 minutes go Code tab , on the right side bar press on Deployment section
 * Then you will find the deployed link in All deployments section
     # live production : 
-        * [https://mohanadpro.github.io/games/]
+        * (https://mohanadpro.github.io/games/)
 
 ---
 
