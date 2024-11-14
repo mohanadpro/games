@@ -79,6 +79,7 @@ tiles.forEach((tile, index) => {
 });
 
 let wonMessage= () => {
+    // Display the congratulatioin message if a player has won
     document.getElementById("message").innerText='Congratulation you have won';
 }
 
@@ -122,8 +123,11 @@ let checkIfWonDiagonal=()=>{
 
 let checkIfWonInRows=()=>{
     let isEqual;
+
+    // loop on each row to check if each column of it has the same type [X or O]
     for (let i = 0; i < 3; i++) {
         isEqual= false;
+        // loop on columns in the row to check if all its tiles has the same type
         for (let k = 0; k < 2; k++)
             if ((takenType[i][k]!=''|| takenType[i][k+1]!='') && takenType[i][k] == takenType[i][k + 1])
                 {
@@ -134,6 +138,9 @@ let checkIfWonInRows=()=>{
                     isEqual=false;
                     break;
                 }
+
+        // If this value true so each column from the row has the same type
+        // I break the loop because a player has won the game
         if(isEqual==true)
             {
                 break;
@@ -146,9 +153,11 @@ let checkIfWonByColumn=()=>{
 
     let col=0;
     let isEqual;
+    // Loop on each column to check if one of them all tiles the same type [X or O]
     while(col<3)
     {
         isEqual=false;
+        // Loop on each row in the column to check if they has the same type
         for(let i=0;i<2;i++)
         {
             if((takenType[i][col]!='' || takenType[i+1][col]!='') && takenType[i][col]=== takenType[i+1][col])
@@ -161,9 +170,11 @@ let checkIfWonByColumn=()=>{
                 break;
             }
         }
+
+        // If this value true so each row from the column has the same type
+        // I break the loop because a player has won the game
         if(isEqual)
-        {
-            
+        {            
             break;
         }
         col++;
