@@ -34,8 +34,9 @@ document.getElementById('reset').addEventListener('click', function () {
 // loop on each tile and add click event handler 
 tiles.forEach((tile, index) => {
     tile.addEventListener('click', function (e) {
+
         // check if the tile is not taken before
-        if (takenTiles[index] != true) {
+        if (takenTiles[index] != true && document.getElementById("message").innerText=='') {
             
             // Algorithm to convert number to two dimensional array
             // Tiles are order from 0 to 8 

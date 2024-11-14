@@ -24,6 +24,19 @@ It's a website that let the user play Tic tac toe and rock paper scissor
 
 ---
 
+# How to deploy project on Github
+* Go to Github website
+* Press on setting tab
+* From the side bar press on pages
+* In Build and deployment section choose, in source section choose Deploy from a branch
+* In Branch  section choose main or master branch then save
+* After 2 or 3 minutes go Code tab , on the right side bar press on Deployment section
+* Then you will find the deployed link in All deployments section
+    # live production : 
+        * https://mohanadpro.github.io/games/
+
+---
+
 # used languages :
 * JAVASCRIPT 
 * HTML 
