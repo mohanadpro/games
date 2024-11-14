@@ -1,7 +1,10 @@
+// List of all choices for the games 
 let initTypes=['rock','paper','scissor'];
 
-
+// Get all images to add click event listener
 let types=document.querySelectorAll('img');
+
+// loop on each type and add click event listener
 for(let type of types)
     type.addEventListener('click',function(e){
         // get type name from the clicked image (rock, paper or scissor)
