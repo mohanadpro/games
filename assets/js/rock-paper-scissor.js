@@ -88,10 +88,8 @@ for(let type of types)
         }
         if( randomType=='rock' &&typeName=='rock')
         {
-            drawActions()
+            drawActions();
         }
-
-
         if( randomType=='paper' &&typeName=='rock')
         {
             lostActions();
@@ -102,17 +100,15 @@ for(let type of types)
         }
         if( randomType=='paper' &&typeName=='paper')
         {
-            drawActions()
+            drawActions();
         }            
-
-
         if( randomType=='scissor' &&typeName=='rock')
         {
             winActions();
         }                
         if( randomType=='scissor' &&typeName=='scissor')
         {
-            drawActions()
+            drawActions();
         }
         if( randomType=='scissor' &&typeName=='paper')
         {                    
@@ -122,18 +118,18 @@ for(let type of types)
 
     const drawActions = () =>{
         document.getElementById('current-game-result').textContent='Draw';
-    }
+    };
 
     const winActions = () =>{
         console.log('Win');
         let wins=parseInt(document.getElementById('won').textContent);
         document.getElementById('current-game-result').textContent='You have won';
         document.getElementById('won').textContent=++wins;
-    }
+    };
     
     const lostActions = () =>{
         console.log('lost');
         let losts=parseInt(document.getElementById('lost').textContent);
         document.getElementById('current-game-result').textContent='You have lost';
         document.getElementById('lost').textContent=++losts;   
-    }
+    };
