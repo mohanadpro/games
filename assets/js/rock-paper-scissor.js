@@ -88,7 +88,7 @@ for(let type of types)
         }
         if( randomType=='rock' &&typeName=='rock')
         {
-            console.log(`random type ${randomType} , your type ${typeName} , even`);
+            drawActions()
         }
 
 
@@ -102,7 +102,7 @@ for(let type of types)
         }
         if( randomType=='paper' &&typeName=='paper')
         {
-            console.log(`random type ${randomType} , your type ${typeName} , even`);
+            drawActions()
         }            
 
 
@@ -112,13 +112,17 @@ for(let type of types)
         }                
         if( randomType=='scissor' &&typeName=='scissor')
         {
-            console.log(`random type ${randomType} , your type ${typeName} , even`);
+            drawActions()
         }
         if( randomType=='scissor' &&typeName=='paper')
         {                    
             lostActions();
         }
     });
+
+    const drawActions = () =>{
+        document.getElementById('current-game-result').textContent='Draw';
+    }
 
     const winActions = () =>{
         console.log('Win');
