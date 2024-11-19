@@ -4,6 +4,9 @@ let initTypes=['rock','paper','scissor'];
 // Get all images to add click event listener
 let types=document.querySelectorAll('img');
 
+
+
+
 // loop on each type and add click event listener
 for(let type of types)
     type.addEventListener('click',function(e){
@@ -22,6 +25,7 @@ for(let type of types)
         // create the second image which is a random choice form the computer
         let img1=document.createElement('img');
         
+
         switch(typeName)
             {
                 // set all attributes for image that we created before for the user choice 
@@ -76,13 +80,11 @@ for(let type of types)
         // and either increase the wins numbers or increase the losts numbers
         if( randomType=='rock' &&typeName=='paper')
         {
-            let wins=parseInt(document.getElementById('won').textContent);
-            document.getElementById('won').textContent=++wins;
+            winActions();
         }
         if( randomType=='rock' &&typeName=='scissor')
         {
-            let losts=parseInt(document.getElementById('lost').textContent);
-            document.getElementById('lost').textContent=++losts;
+            lostActions();
         }
         if( randomType=='rock' &&typeName=='rock')
         {
@@ -92,13 +94,11 @@ for(let type of types)
 
         if( randomType=='paper' &&typeName=='rock')
         {
-            let losts=parseInt(document.getElementById('lost').textContent);
-            document.getElementById('lost').textContent=++losts;
+            lostActions();
         }
         if( randomType=='paper' &&typeName=='scissor')
         {
-            let wins=parseInt(document.getElementById('won').textContent);
-            document.getElementById('won').textContent=++wins;
+            winActions();
         }
         if( randomType=='paper' &&typeName=='paper')
         {
@@ -108,8 +108,7 @@ for(let type of types)
 
         if( randomType=='scissor' &&typeName=='rock')
         {
-            let wins=parseInt(document.getElementById('won').textContent);
-            document.getElementById('won').textContent=++wins;
+            winActions();
         }                
         if( randomType=='scissor' &&typeName=='scissor')
         {
@@ -117,7 +116,20 @@ for(let type of types)
         }
         if( randomType=='scissor' &&typeName=='paper')
         {                    
-            let losts=parseInt(document.getElementById('lost').textContent);
-            document.getElementById('lost').textContent=++losts;
+            lostActions();
         }
     });
+
+    const winActions = () =>{
+        console.log('Win');
+        let wins=parseInt(document.getElementById('won').textContent);
+        document.getElementById('current-game-result').textContent='You have won';
+        document.getElementById('won').textContent=++wins;
+    }
+    
+    const lostActions = () =>{
+        console.log('lost');
+        let losts=parseInt(document.getElementById('lost').textContent);
+        document.getElementById('current-game-result').textContent='You have lost';
+        document.getElementById('lost').textContent=++losts;   
+    }
