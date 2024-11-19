@@ -28,7 +28,7 @@ document.getElementById('reset').addEventListener('click', function () {
     takenType=[['', '', ''], ['', '', ''], ['', '', '']];
     xCurrentPlayer = true;
     document.getElementById("message").innerText='';
-})
+});
 
 
 // loop on each tile and add click event handler 
@@ -75,13 +75,13 @@ tiles.forEach((tile, index) => {
             // after every click check if the player win
             checkIfWon();
         }
-    })
+    });
 });
 
 let wonMessage= () => {
     // Display the congratulatioin message if a player has won
     document.getElementById("message").innerText='Congratulation you have won';
-}
+};
 
 let checkIfWon = () => {
     let isWonInColumn=checkIfWonByColumn();
@@ -89,7 +89,7 @@ let checkIfWon = () => {
     // check if the player win in any column
     if(isWonInColumn)
         {
-            wonMessage()
+            wonMessage();
         }
     else
     {
@@ -97,29 +97,29 @@ let checkIfWon = () => {
         let isWonInRow=checkIfWonInRows();
         if(isWonInRow)
         {
-            wonMessage()
+            wonMessage();
         }
         else
         {
             // check if the player win in any diagonal
             let isWonDiagonal=checkIfWonDiagonal();
             if(isWonDiagonal)
-                wonMessage()  
+                wonMessage();
         }
     }
     
-}
+};
 
 let checkIfWonDiagonal=()=>{
 
-    if(((takenType[0][0]!='' && takenType[1][1]!='' && takenType[2][2]!='') 
-    && (takenType[0][0]==takenType[1][1] && takenType[0][0]==takenType[2][2])) ||
+    if(((takenType[0][0]!='' && takenType[1][1]!='' && takenType[2][2]!='') && 
+    (takenType[0][0]==takenType[1][1] && takenType[0][0]==takenType[2][2])) ||
     ((takenType[2][0]!='' && takenType[1][1]!='' && (takenType[0][2]!='') &&
     (takenType[0][2]==takenType[1][1] && takenType[0][2]==takenType[2][0]))))         
         return true;
     else             
         return false;
-}
+};
 
 let checkIfWonInRows=()=>{
     let isEqual;
@@ -147,7 +147,7 @@ let checkIfWonInRows=()=>{
             }
     }
     return isEqual;
-}
+};
 
 let checkIfWonByColumn=()=>{
 
@@ -180,4 +180,4 @@ let checkIfWonByColumn=()=>{
         col++;
     }
     return isEqual;
-}
+};

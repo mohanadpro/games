@@ -33,7 +33,7 @@ for(let type of types)
                 case 'rock':
                 firstImage.setAttribute("src",'assets/images/Rock.png');
                 firstImage.setAttribute("alt",'Rock');
-                firstImage.setAttribute("id","rock")                       
+                firstImage.setAttribute("id","rock");                  
                     break;
                 case 'scissor':
                 firstImage.setAttribute("src",'assets/images/Scissor.png');
@@ -120,4 +120,4 @@ for(let type of types)
             let losts=parseInt(document.getElementById('lost').textContent);
             document.getElementById('lost').textContent=++losts;
         }
-    })
+    });
