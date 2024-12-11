@@ -143,6 +143,15 @@ It's a website that let the user play Tic tac toe and rock paper scissor
         * Largest function has 28 statements in it, while the median is 4.
         * The most complex function has a cyclomatic complexity value of 25 while the median is 1.
 
+### Analyze page load
+* It provides the best practice, when it is tested through lighthouse
+
+<br/>
+
+![](assets/images/analyze-page-load.png)
+
+<br/>
+
 ## Bugs
 ---
 * No bugs were found
