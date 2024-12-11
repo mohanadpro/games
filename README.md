@@ -9,9 +9,10 @@ It's a website that let the user play Tic tac toe and rock paper scissor
 ---
 * There are three provided images [ Rock - Paper - Scissor ] these are the choices for the user 
 <br/>
-![](assets/images/rock-paper-scissor-readme.png)
-<br/>
 
+![](assets/images/rock-paper-scissor-readme.png)
+
+<br/>
 * User can choose one of them and in the computer choose a random choice 
 * Win poissibles
     * paper win rock
