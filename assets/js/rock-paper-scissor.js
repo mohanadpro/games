@@ -27,22 +27,13 @@ for(let type of types)
             {
                 // set all attributes for image that we created before for the user choice 
                 case 'paper':
-                // firstImage.setAttribute("src",'assets/images/Paper.png');
-                // firstImage.setAttribute("alt",'Paper'); 
-                // firstImage.setAttribute("id","paper");  
                 firstImage = createImage(firstImage,'assets/images/Paper.png','Paper',"paper")                       
                     break;
                 case 'rock':
-                // firstImage.setAttribute("src",'assets/images/Rock.png');
-                // firstImage.setAttribute("alt",'Rock');
-                // firstImage.setAttribute("id","rock"); 
                 firstImage = createImage(firstImage,'assets/images/Rock.png','Rock',"rock")                       
 
                     break;
                 case 'scissor':
-                // firstImage.setAttribute("src",'assets/images/Scissor.png');
-                // firstImage.setAttribute("alt",'Scissor');
-                // firstImage.setAttribute("id","scissor");    
                 firstImage = createImage(firstImage,'assets/images/Scissor.png','Scissor',"scissor")                       
 
                     break;
@@ -50,24 +41,15 @@ for(let type of types)
             switch(randomType)
             {
                 // set all attributes for image that we created before for the random choice from the computer 
-                case 'paper':
-                    // img1.setAttribute("src",'assets/images/Paper.png');
-                    // img1.setAttribute("alt",'Paper');
-                    // img1.setAttribute("id","paper1");  
+                case 'paper':  
                     img1 = createImage(img1,'assets/images/Paper.png','Paper',"paper1")                       
                     break;                        
 
                 case 'rock':
-                    // img1.setAttribute("src",'assets/images/Rock.png');
-                    // img1.setAttribute("alt",'Rock');
-                    // img1.setAttribute("id","rock1");
                     img1 = createImage(img1,'assets/images/Rock.png','Rock',"rock1")                       
                     break;
 
                 case 'scissor':
-                    // img1.setAttribute("src",'assets/images/Scissor.png');
-                    // img1.setAttribute("alt",'Scissor');
-                    // img1.setAttribute("id","scissor1");
                     img1 = createImage(img1,'assets/images/Scissor.png','Scissor',"scissor1")                       
                     break;
             }
