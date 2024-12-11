@@ -5,8 +5,6 @@ let initTypes=['rock','paper','scissor'];
 let types=document.querySelectorAll('img');
 
 
-
-
 // loop on each type and add click event listener
 for(let type of types)
     type.addEventListener('click',function(e){
