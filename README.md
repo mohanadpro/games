@@ -81,7 +81,7 @@ It's a website that let the user play Tic tac toe and rock paper scissor
 
 <br/>
 
-### How to clone project
+## How to clone project
 ---
 * git clone https://github.com/mohanadpro/games.git
 
@@ -143,7 +143,7 @@ It's a website that let the user play Tic tac toe and rock paper scissor
         * Largest function has 28 statements in it, while the median is 4.
         * The most complex function has a cyclomatic complexity value of 25 while the median is 1.
 
-### Bugs
+## Bugs
 ---
 * No bugs were found
 
@@ -153,7 +153,7 @@ It's a website that let the user play Tic tac toe and rock paper scissor
 * Rock paper scissor images were taken from Vecteezy
 
 
-### Deployment
+## Deployment
 ---
 * The site was deployed to GitHub pages. The steps to deploy are as follows:
     * In the GitHub repository, navigate to the Settings tab
