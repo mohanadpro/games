@@ -20,19 +20,37 @@ It's a website that let the user play Tic tac toe and rock paper scissor
     * scissor win paper
     * rock win scissor
 * if user won the turn,a win message will be displayed above the result box and the win counter will be increased by one
+
+<br/>
+
 ![](assets/images/win.png)
+
+<br/>
 
 ![](assets/images/win-increase.png)
 
+<br/>
+
 * if user lost the turn ,a lost message will be displayed above the result box the lost counter will be increased by one
+
+<br/>
+
 
 ![](assets/images/lost.png)
 
+<br/>
+
 ![](assets/images/lost-increase.png)
+
+<br/>
 
 * if there is a draw ,a draw message will be displayed above the result box
 
+<br/>
+
 ![](assets/images/draw.png)
+
+<br/>
 
 ### How to play tic tac toe
 ---
@@ -41,15 +59,27 @@ It's a website that let the user play Tic tac toe and rock paper scissor
 * There are two options ( X or O )
 * The first user press one a tile and the other user press on another one
 
+<br/>
+
 ![](assets/images/tic-tac-toe-readme.png)
 
+<br/>
+
 * User wins the match if user put 3 X or O in one row, column or diagonal
+
+<br/>
+
 ![](assets/images/tic-tac-toe-win-readme.png)
+
+<br/>
 
 * if a user has won, a congrationlation message will be shown
 
+<br/>
+
 ![](assets/images/win-message-readme.png)
 
+<br/>
 
 ### How to clone project
 ---
@@ -62,12 +92,20 @@ It's a website that let the user play Tic tac toe and rock paper scissor
 * HTML
     * No errors were returned when passing through the official [W3C validator](https://validator.w3.org/#validate_by_input)
 
+<br/>
+
 ![](assets/images/html-files-validation.png)
+
+<br/>
 
 * CSS
     * No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/#validate_by_input)
 
+<br/>
+
 ![](assets/images/css-validation.png)
+
+<br/>
 
 * JavaScript
     * No errors were found when passing through the official [Jshint validator]()
@@ -83,12 +121,20 @@ It's a website that let the user play Tic tac toe and rock paper scissor
 * HTML
     * No errors were returned when passing through the official [W3C validator](https://validator.w3.org/#validate_by_input)
 
+<br/>
+
 ![](assets/images/html-files-validation.png)
+
+<br/>
 
 * CSS
     * No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/#validate_by_input)
 
+<br/>
+
 ![](assets/images/css-validation.png)
+
+<br/>
 
 * JavaScript
     * one error were found when passing through the official [Jshint validator](https://jshint.com/)
