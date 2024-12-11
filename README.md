@@ -8,16 +8,16 @@ It's a website that let the user play Tic tac toe and rock paper scissor
 ### How to play rock paper scissor
 ---
 * There are three provided images [ Rock - Paper - Scissor ] these are the choices for the user 
-__
+<br>
 ![](assets/images/rock-paper-scissor-readme.png)
-
+<br>
 * User can choose one of them and in the computer choose a random choice 
 * Win poissibles
     * paper win rock
     * scissor win paper
     * rock win scissor
 * if user won the turn,a win message will be displayed above the result box and the win counter will be increased by one
-__
+<br>
 ![](assets/images/win.png)
 
 ![](assets/images/win-increase.png)
