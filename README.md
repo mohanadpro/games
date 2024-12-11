@@ -137,7 +137,7 @@ It's a website that let the user play Tic tac toe and rock paper scissor
 <br/>
 
 * JavaScript
-    * one error were found when passing through the official [Jshint validator](https://jshint.com/)
+    * No error were found when passing through the official [Jshint validator](https://jshint.com/)
         * There are 4 functions in this file.
         * Function with the largest signature take 1 arguments, while the median is 0.
         * Largest function has 28 statements in it, while the median is 4.
