@@ -214,6 +214,6 @@ Why Choose Us?
 ### Media
 * Rock paper scissor images were taken from Vecteezy
 ### Code
-* ![W3C](https://validator.w3.org/) to validate written code
-* ![Stak over flow](https://stackoverflow.com/) to get information in coding
-* ![Am i responsive][https://ui.dev/amiresponsive] to see project in different screens
+* [W3C](https://validator.w3.org/) to validate written code
+* [Stak over flow](https://stackoverflow.com/) to get information in coding
+* [Am i responsive][https://ui.dev/amiresponsive] to see project in different screens
