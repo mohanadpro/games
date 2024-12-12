@@ -1,7 +1,12 @@
+:root{
+    --background-color:#26006f;
+    --primary-color:#01dfba;
+}
+
 body{
     margin: 0;
     padding: 0;
-    background-color: #26006f;
+    background-color: var(--background-color);
 }
 
 #board{
@@ -23,7 +28,7 @@ body{
 .tile{
     width: 100px;
     height: 100px;
-    border: 1px solid #01dfba;
+    border: 1px solid var(--primary-color);
     font-size: 50px;
     color: white;
     display: flex;
@@ -33,17 +38,17 @@ body{
 
 #reset{
     width: 300px;
-    background-color: #01dfba;
-    color: #26006f;
+    background-color: var(--primary-color);
+    color: var(--background-color);
 }
 
 .message{
-    color: #01dfba;
+    color: var(--primary-color);
     font-size: 25px;
 }
 
 #rock-paper-scissor-game{
-    border: 3px solid #01dfba;
+    border: 3px solid var(--primary-color);
     width: 300px;
     height: 400px;
     display: flex;
@@ -78,7 +83,7 @@ body{
     }
 
     #rock-paper-scissor-game{
-        border: 3px solid #01dfba;
+        border: 3px solid var(--primary-color);
         width: 100px;
         height: 200px;
         display: flex;
