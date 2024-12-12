@@ -65,41 +65,18 @@ for(let type of types)
 
         // compare the choised type from the user with the random type from the computer 
         // and either increase the wins numbers or increase the losts numbers
-        if( randomType=='rock' &&typeName=='paper')
+        if( (randomType=='rock' &&typeName=='paper') || (randomType=='paper' &&typeName=='scissor') || ( randomType=='scissor' &&typeName=='rock'))
         {
             winActions();
         }
-        if( randomType=='rock' &&typeName=='scissor')
+        else
+        if( (randomType=='rock' &&typeName=='scissor') || ( randomType=='paper' &&typeName=='rock') || ( randomType=='scissor' &&typeName=='paper'))
         {
             lostActions();
         }
-        if( randomType=='rock' &&typeName=='rock')
+        else
         {
             drawActions();
-        }
-        if( randomType=='paper' &&typeName=='rock')
-        {
-            lostActions();
-        }
-        if( randomType=='paper' &&typeName=='scissor')
-        {
-            winActions();
-        }
-        if( randomType=='paper' &&typeName=='paper')
-        {
-            drawActions();
-        }            
-        if( randomType=='scissor' &&typeName=='rock')
-        {
-            winActions();
-        }                
-        if( randomType=='scissor' &&typeName=='scissor')
-        {
-            drawActions();
-        }
-        if( randomType=='scissor' &&typeName=='paper')
-        {                    
-            lostActions();
         }
     });
 
@@ -115,14 +92,12 @@ for(let type of types)
     };
 
     const winActions = () =>{
-        console.log('Win');
         let wins=parseInt(document.getElementById('won').textContent);
         document.getElementById('current-game-result').textContent='You have won';
         document.getElementById('won').textContent=++wins;
     };
     
     const lostActions = () =>{
-        console.log('lost');
         let losts=parseInt(document.getElementById('lost').textContent);
         document.getElementById('current-game-result').textContent='You have lost';
         document.getElementById('lost').textContent=++losts;   
